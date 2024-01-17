@@ -4,263 +4,6 @@ import os
 def clear():
     os.system('cls')
 
-def computer_second_batting():
-    print('                                                                     ----------------------------')
-    print('                                                                     You are batting now')
-    print('                                                                     ----------------------------')
-    j=input('                                                                     Press ENTER to continue...')
-    clear()
-    ys=0
-    g=0
-    while g==0:
-        try:
-            n1=int(input('                                                                     Enter your number in range of 0 to 10: '))
-            clear()
-            if n1<0 or n1>10:
-                print('                                                                     ----------------------------')
-                print('                                                                     The value is out of range enter again')
-                print('                                                                     ----------------------------')
-            else:
-                print('                                                                     ----------------------------')
-                print('                                                                     Your number: ',n1)
-                n2=random.randrange(11)
-                print('                                                                     My number: ',n2)
-                if n1==0 and n2==1:
-                    print('                                                                     You are Out')
-                    print('                                                                     Your final score: ',ys)
-                    print('                                                                     ----------------------------')
-                    g+=1
-                elif n1==0 and n2>1:
-                    ys+=n2
-                    print('                                                                     Your current score: ',ys)
-                    print('                                                                     ----------------------------')
-                elif n2==0:
-                    print('                                                                     Free Hit +10')
-                    ys+=n1+10
-                    print('                                                                     Your current score: ',ys)
-                    print('                                                                     ----------------------------')
-                elif n1!=n2:
-                    ys+=n1
-                    print('                                                                     Your current score: ',ys)
-                    print('                                                                     ----------------------------')
-                elif n1==n2:
-                    print('                                                                     You are Out')
-                    print('                                                                     Your final score: ',ys)
-                    print('                                                                     ----------------------------')
-                    g+=1
-        except ValueError:
-            print('                                                                     ----------------------------')
-            print('                                                                     Enter only numerical value')
-            print('                                                                     ----------------------------')
-    print('                                                                     Target: ',ys+1)
-    print('                                                                     ----------------------------')
-    j=input('                                                                     Press ENTER to continue...')
-    clear()
-    print('                                                                     ----------------------------')
-    print('                                                                     Now it\'s my turn for batting')
-    print('                                                                     ----------------------------')
-    j=input('                                                                     Press ENTER to continue...')
-    clear()
-    cs=0
-    t=ys+1
-    g=0
-    while g==0:
-        try:
-            print('                                                                     ----------------------------')
-            n1=int(input('                                                                     Enter your number in range of 0 to 10: '))
-            clear()
-            if n1<0 or n1>10:
-                print('                                                                     ----------------------------')
-                print('                                                                     The value is out of range enter again')
-                print('                                                                     ----------------------------')
-            else:
-                print('                                                                     ----------------------------')
-                print('                                                                     Your number: ',n1)
-                n2=random.randrange(11)
-                print('                                                                     My number: ',n2)
-                if n2==0 and n1==1:
-                    print('                                                                     I am Out')
-                    print('                                                                     My final score: ',cs)
-                    print('                                                                     Target: ',t)
-                    print('                                                                     ----------------------------')
-                    print('                                                                           YOU WON THE GAME')
-                    print('                                                                     ----------------------------')
-                    g+=1
-                elif n2==0 and n1>1:
-                    cs+=n1
-                    print('                                                                     My current score: ',cs)
-                    print('                                                                     Target: ',t)
-                    print('                                                                     ----------------------------')
-                    if cs>=t:
-                        print('                                                                     ----------------------------')
-                        print('                                                                            I WON THE GAME')
-                        print('                                                                     ----------------------------')
-                        g+=1
-                elif n1==0:
-                    print('                                                                     Free Hit +10')
-                    cs+=n2+10
-                    print('                                                                     My current score: ',cs)
-                    print('                                                                     Target: ',t)
-                    print('                                                                     ----------------------------')
-                    if cs>=t:
-                        print('                                                                     ----------------------------')
-                        print('                                                                            I WON THE GAME')
-                        print('                                                                     ----------------------------')
-                        g+=1
-                elif n2!=n1:
-                    cs+=n2
-                    print('                                                                     My current score: ',cs)
-                    print('                                                                     Target: ',t)
-                    print('                                                                     ----------------------------')
-                    if cs>=t:
-                        print('                                                                     ----------------------------')
-                        print('                                                                            I WON THE GAME')
-                        print('                                                                     ----------------------------')
-                        g+=1
-                elif n2==n1:
-                    print('                                                                     I am Out')
-                    print('                                                                     My final score: ',cs)
-                    print('                                                                     Target: ',t)
-                    print('                                                                     ----------------------------')
-                    print('                                                                           YOU WON THE GAME')
-                    print('                                                                     ----------------------------')
-                    g+=1
-        except ValueError:
-            print('                                                                     ----------------------------')
-            print('                                                                     Enter only numerical value')
-            print('                                                                     ----------------------------')
-    j=input('                                                                     Press ENTER to continue...')
-    clear()
-
-def computer_first_batting():
-    print('                                                                     ----------------------------')
-    print('                                                                     I am batting now')
-    print('                                                                     ----------------------------')
-    j=input('                                                                     Press ENTER to continue...')
-    clear()
-    cs=0
-    g=0
-    while g==0:
-        try:
-            n1=int(input('                                                                     Enter your number in range of 0 to 10: '))
-            clear()
-            if n1<0 or n1>10:
-                print('                                                                     ----------------------------')
-                print('                                                                     The value is out of range enter again')
-                print('                                                                     ----------------------------')
-            else:
-                print('                                                                     ----------------------------')
-                print('                                                                     Your number: ',n1)
-                n2=random.randrange(11)
-                print('                                                                     My number: ',n2)
-                if n2==0 and n1==1:
-                    print('                                                                     I am Out')
-                    print('                                                                     My final score: ',cs)
-                    print('                                                                     ----------------------------')
-                    g+=1
-                elif n2==0 and n1>1:
-                    cs+=n1
-                    print('                                                                     My current score: ',cs)
-                    print('                                                                     ----------------------------')
-                elif n1==0:
-                    print('                                                                     Free Hit +10')
-                    cs+=n2+10
-                    print('                                                                     My current score: ',cs)
-                    print('                                                                     ----------------------------')
-                elif n2!=n1:
-                    cs+=n2
-                    print('                                                                     My current score: ',cs)
-                    print('                                                                     ----------------------------')
-                elif n2==n1:
-                    print('                                                                     I am Out')
-                    print('                                                                     My final score: ',cs)
-                    print('                                                                     ----------------------------')
-                    g+=1
-        except ValueError:
-            print('                                                                     ----------------------------')
-            print('                                                                     Enter only numerical values')
-            print('                                                                     ----------------------------')
-    print('                                                                     ----------------------------')
-    print('                                                                     Target: ',cs+1)
-    print('                                                                     ----------------------------')
-    j=input('                                                                     Press ENTER to continue...')
-    clear()
-    print('                                                                     ----------------------------')
-    print('                                                                     Now it\'s your turn for batting')
-    print('                                                                     ----------------------------')
-    j=input('                                                                     Press ENTER to continue...')
-    clear()
-    ys=0
-    t=cs+1
-    g=0
-    while g==0:
-        try:
-            print('                                                                     ----------------------------')
-            n1=int(input('                                                                     Enter your number in range of 0 to 10: '))
-            clear()
-            if n1<0 or n1>10:
-                print('                                                                     ----------------------------')
-                print('                                                                     The value is out of range enter again')
-                print('                                                                     ----------------------------')
-            else:
-                print('                                                                     ----------------------------')
-                print('                                                                     Your number: ',n1)
-                n2=random.randrange(11)
-                print('                                                                     My number: ',n2)
-                if n1==0 and n2==1:
-                    print('                                                                     You are Out')
-                    print('                                                                     Your final score: ',ys)
-                    print('                                                                     Target: ',t)
-                    print('                                                                     ----------------------------')
-                    print('                                                                            I WON THE GAME')
-                    print('                                                                     ----------------------------')
-                    g+=1
-                elif n1==0 and n2>1:
-                    ys+=n2
-                    print('                                                                     Your current score: ',ys)
-                    print('                                                                     Target: ',t)
-                    print('                                                                     ----------------------------')
-                    if ys>=t:
-                        print('                                                                     ----------------------------')
-                        print('                                                                           YOU WON THE GAME')
-                        print('                                                                     ----------------------------')
-                        g+=1
-                elif n2==0:
-                    print('                                                                     Free Hit +10')
-                    ys+=n1+10
-                    print('                                                                     Your current score: ',ys)
-                    print('                                                                     Target: ',t)
-                    print('                                                                     ----------------------------')
-                    if ys>=t:
-                        print('                                                                     ----------------------------')
-                        print('                                                                           YOU WON THE GAME')
-                        print('                                                                     ----------------------------')
-                        g+=1
-                elif n1!=n2:
-                    ys+=n1
-                    print('                                                                     Your current score: ',ys)
-                    print('                                                                     Target: ',t)
-                    print('                                                                     ----------------------------')
-                    if ys>=t:
-                        print('                                                                     ----------------------------')
-                        print('                                                                           YOU WON THE GAME')
-                        print('                                                                     ----------------------------')
-                        g+=1
-                elif n1==n2:
-                    print('                                                                     You are Out')
-                    print('                                                                     Your final score: ',ys)
-                    print('                                                                     Target: ',t)
-                    print('                                                                     ----------------------------')
-                    print('                                                                            I WON THE GAME')
-                    print('                                                                     ----------------------------')
-                    g+=1
-        except ValueError:
-            print('                                                                     ----------------------------')
-            print('                                                                     Enter only numerical values')
-            print('                                                                     ----------------------------')
-    j=input('                                                                     Press ENTER to continue...')
-    clear()
-
 def play_again_or_not():
     h=0
     while h==0:
@@ -284,6 +27,264 @@ def play_again_or_not():
     return v
 
 def handcricket():
+    
+    def computer_second_batting():
+        print('                                                                     ----------------------------')
+        print('                                                                     You are batting now')
+        print('                                                                     ----------------------------')
+        j=input('                                                                     Press ENTER to continue...')
+        clear()
+        ys=0
+        g=0
+        while g==0:
+            try:
+                n1=int(input('                                                                     Enter your number in range of 0 to 10: '))
+                clear()
+                if n1<0 or n1>10:
+                    print('                                                                     ----------------------------')
+                    print('                                                                     The value is out of range enter again')
+                    print('                                                                     ----------------------------')
+                else:
+                    print('                                                                     ----------------------------')
+                    print('                                                                     Your number: ',n1)
+                    n2=random.randrange(11)
+                    print('                                                                     My number: ',n2)
+                    if n1==0 and n2==1:
+                        print('                                                                     You are Out')
+                        print('                                                                     Your final score: ',ys)
+                        print('                                                                     ----------------------------')
+                        g+=1
+                    elif n1==0 and n2>1:
+                        ys+=n2
+                        print('                                                                     Your current score: ',ys)
+                        print('                                                                     ----------------------------')
+                    elif n2==0:
+                        print('                                                                     Free Hit +10')
+                        ys+=n1+10
+                        print('                                                                     Your current score: ',ys)
+                        print('                                                                     ----------------------------')
+                    elif n1!=n2:
+                        ys+=n1
+                        print('                                                                     Your current score: ',ys)
+                        print('                                                                     ----------------------------')
+                    elif n1==n2:
+                        print('                                                                     You are Out')
+                        print('                                                                     Your final score: ',ys)
+                        print('                                                                     ----------------------------')
+                        g+=1
+            except ValueError:
+                print('                                                                     ----------------------------')
+                print('                                                                     Enter only numerical value')
+                print('                                                                     ----------------------------')
+        print('                                                                     Target: ',ys+1)
+        print('                                                                     ----------------------------')
+        j=input('                                                                     Press ENTER to continue...')
+        clear()
+        print('                                                                     ----------------------------')
+        print('                                                                     Now it\'s my turn for batting')
+        print('                                                                     ----------------------------')
+        j=input('                                                                     Press ENTER to continue...')
+        clear()
+        cs=0
+        t=ys+1
+        g=0
+        while g==0:
+            try:
+                print('                                                                     ----------------------------')
+                n1=int(input('                                                                     Enter your number in range of 0 to 10: '))
+                clear()
+                if n1<0 or n1>10:
+                    print('                                                                     ----------------------------')
+                    print('                                                                     The value is out of range enter again')
+                    print('                                                                     ----------------------------')
+                else:
+                    print('                                                                     ----------------------------')
+                    print('                                                                     Your number: ',n1)
+                    n2=random.randrange(11)
+                    print('                                                                     My number: ',n2)
+                    if n2==0 and n1==1:
+                        print('                                                                     I am Out')
+                        print('                                                                     My final score: ',cs)
+                        print('                                                                     Target: ',t)
+                        print('                                                                     ----------------------------')
+                        print('                                                                           YOU WON THE GAME')
+                        print('                                                                     ----------------------------')
+                        g+=1
+                    elif n2==0 and n1>1:
+                        cs+=n1
+                        print('                                                                     My current score: ',cs)
+                        print('                                                                     Target: ',t)
+                        print('                                                                     ----------------------------')
+                        if cs>=t:
+                            print('                                                                     ----------------------------')
+                            print('                                                                            I WON THE GAME')
+                            print('                                                                     ----------------------------')
+                            g+=1
+                    elif n1==0:
+                        print('                                                                     Free Hit +10')
+                        cs+=n2+10
+                        print('                                                                     My current score: ',cs)
+                        print('                                                                     Target: ',t)
+                        print('                                                                     ----------------------------')
+                        if cs>=t:
+                            print('                                                                     ----------------------------')
+                            print('                                                                            I WON THE GAME')
+                            print('                                                                     ----------------------------')
+                            g+=1
+                    elif n2!=n1:
+                        cs+=n2
+                        print('                                                                     My current score: ',cs)
+                        print('                                                                     Target: ',t)
+                        print('                                                                     ----------------------------')
+                        if cs>=t:
+                            print('                                                                     ----------------------------')
+                            print('                                                                            I WON THE GAME')
+                            print('                                                                     ----------------------------')
+                            g+=1
+                    elif n2==n1:
+                        print('                                                                     I am Out')
+                        print('                                                                     My final score: ',cs)
+                        print('                                                                     Target: ',t)
+                        print('                                                                     ----------------------------')
+                        print('                                                                           YOU WON THE GAME')
+                        print('                                                                     ----------------------------')
+                        g+=1
+            except ValueError:
+                print('                                                                     ----------------------------')
+                print('                                                                     Enter only numerical value')
+                print('                                                                     ----------------------------')
+        j=input('                                                                     Press ENTER to continue...')
+        clear()
+
+    def computer_first_batting():
+        print('                                                                     ----------------------------')
+        print('                                                                     I am batting now')
+        print('                                                                     ----------------------------')
+        j=input('                                                                     Press ENTER to continue...')
+        clear()
+        cs=0
+        g=0
+        while g==0:
+            try:
+                n1=int(input('                                                                     Enter your number in range of 0 to 10: '))
+                clear()
+                if n1<0 or n1>10:
+                    print('                                                                     ----------------------------')
+                    print('                                                                     The value is out of range enter again')
+                    print('                                                                     ----------------------------')
+                else:
+                    print('                                                                     ----------------------------')
+                    print('                                                                     Your number: ',n1)
+                    n2=random.randrange(11)
+                    print('                                                                     My number: ',n2)
+                    if n2==0 and n1==1:
+                        print('                                                                     I am Out')
+                        print('                                                                     My final score: ',cs)
+                        print('                                                                     ----------------------------')
+                        g+=1
+                    elif n2==0 and n1>1:
+                        cs+=n1
+                        print('                                                                     My current score: ',cs)
+                        print('                                                                     ----------------------------')
+                    elif n1==0:
+                        print('                                                                     Free Hit +10')
+                        cs+=n2+10
+                        print('                                                                     My current score: ',cs)
+                        print('                                                                     ----------------------------')
+                    elif n2!=n1:
+                        cs+=n2
+                        print('                                                                     My current score: ',cs)
+                        print('                                                                     ----------------------------')
+                    elif n2==n1:
+                        print('                                                                     I am Out')
+                        print('                                                                     My final score: ',cs)
+                        print('                                                                     ----------------------------')
+                        g+=1
+            except ValueError:
+                print('                                                                     ----------------------------')
+                print('                                                                     Enter only numerical values')
+                print('                                                                     ----------------------------')
+        print('                                                                     ----------------------------')
+        print('                                                                     Target: ',cs+1)
+        print('                                                                     ----------------------------')
+        j=input('                                                                     Press ENTER to continue...')
+        clear()
+        print('                                                                     ----------------------------')
+        print('                                                                     Now it\'s your turn for batting')
+        print('                                                                     ----------------------------')
+        j=input('                                                                     Press ENTER to continue...')
+        clear()
+        ys=0
+        t=cs+1
+        g=0
+        while g==0:
+            try:
+                print('                                                                     ----------------------------')
+                n1=int(input('                                                                     Enter your number in range of 0 to 10: '))
+                clear()
+                if n1<0 or n1>10:
+                    print('                                                                     ----------------------------')
+                    print('                                                                     The value is out of range enter again')
+                    print('                                                                     ----------------------------')
+                else:
+                    print('                                                                     ----------------------------')
+                    print('                                                                     Your number: ',n1)
+                    n2=random.randrange(11)
+                    print('                                                                     My number: ',n2)
+                    if n1==0 and n2==1:
+                        print('                                                                     You are Out')
+                        print('                                                                     Your final score: ',ys)
+                        print('                                                                     Target: ',t)
+                        print('                                                                     ----------------------------')
+                        print('                                                                            I WON THE GAME')
+                        print('                                                                     ----------------------------')
+                        g+=1
+                    elif n1==0 and n2>1:
+                        ys+=n2
+                        print('                                                                     Your current score: ',ys)
+                        print('                                                                     Target: ',t)
+                        print('                                                                     ----------------------------')
+                        if ys>=t:
+                            print('                                                                     ----------------------------')
+                            print('                                                                           YOU WON THE GAME')
+                            print('                                                                     ----------------------------')
+                            g+=1
+                    elif n2==0:
+                        print('                                                                     Free Hit +10')
+                        ys+=n1+10
+                        print('                                                                     Your current score: ',ys)
+                        print('                                                                     Target: ',t)
+                        print('                                                                     ----------------------------')
+                        if ys>=t:
+                            print('                                                                     ----------------------------')
+                            print('                                                                           YOU WON THE GAME')
+                            print('                                                                     ----------------------------')
+                            g+=1
+                    elif n1!=n2:
+                        ys+=n1
+                        print('                                                                     Your current score: ',ys)
+                        print('                                                                     Target: ',t)
+                        print('                                                                     ----------------------------')
+                        if ys>=t:
+                            print('                                                                     ----------------------------')
+                            print('                                                                           YOU WON THE GAME')
+                            print('                                                                     ----------------------------')
+                            g+=1
+                    elif n1==n2:
+                        print('                                                                     You are Out')
+                        print('                                                                     Your final score: ',ys)
+                        print('                                                                     Target: ',t)
+                        print('                                                                     ----------------------------')
+                        print('                                                                            I WON THE GAME')
+                        print('                                                                     ----------------------------')
+                        g+=1
+            except ValueError:
+                print('                                                                     ----------------------------')
+                print('                                                                     Enter only numerical values')
+                print('                                                                     ----------------------------')
+        j=input('                                                                     Press ENTER to continue...')
+        clear()
+    
     print('''
                                         ██╗░░██╗░█████╗░███╗░░██╗██████╗░  ░█████╗░██████╗░██╗░█████╗░██╗░░██╗███████╗████████╗
                                         ██║░░██║██╔══██╗████╗░██║██╔══██╗  ██╔══██╗██╔══██╗██║██╔══██╗██║░██╔╝██╔════╝╚══██╔══╝
@@ -646,10 +647,11 @@ def PIG():
                             |     2. If the value of the die is a 1, the player that rolled the 1 loses all of their points.              |
                             |     3. Otherwise, the player gets the value of the die added to their points.                               |   
                             |     4. The first player to reach 30 points wins!                                                            |       
-                            ---------------------------------------------------------------------------------------------------------------
-                        
-                        
-        ''')
+                            ---------------------------------------------------------------------------------------------------------------''')
+    print('''
+        
+
+            ''')
     h=input('                                                                     Press ENTER to continue...')
     clear()
     a=0
@@ -721,6 +723,8 @@ def PIG():
                     else:
                         e=0
                         d=1
+    h=input('                                                                     Press ENTER to continue...')
+    clear()
 
 def NG():
     print('''
@@ -737,11 +741,11 @@ def NG():
                                         |    2. You have to guess the number.                                        |
                                         |    3. You will have a total of 7 attempts.                                 |
                                         |    4. If u use up all the attempts, then u lose and the number is revealed.|
-                                        ------------------------------------------------------------------------------
-          ''')
-    
-    
-    
+                                        ------------------------------------------------------------------------------''')
+    print('''
+        
+
+            ''')
     h=input('                                                                     Press ENTER to continue...')
     clear()
     n=random.randint(1,50)
@@ -788,6 +792,279 @@ def NG():
                 print('                                                                     ----------------------------')
                 print('                                                                     Enter only numerical values')
                 print('                                                                     ----------------------------')
+    h=input('                                                                     Press ENTER to continue...')
+    clear()
+
+def HANGMAN():
+    def choose_word():
+        words=['CAT', 'DOG', 'FISH', 'BIRD', 'TREE', 'HOUSE', 'MOON', 'SUN', 'RAIN', 'STAR', 'BOOK', 'PEN', 'RED', 'BLUE', 'GREEN', 'FOOD', 'BALL', 'GAME', 'JUMP', 'RUN', 'BABY', 'BIRD', 'SING', 'CAKE', 'DOOR', 'LAMP', 'HAT', 'CAR', 'BED', 'HILL', 'FARM', 'KEY', 'LOCK', 'TIME', 'SAND', 'CLOUD', 'SHOE', 'SHIP', 'HILL', 'FLAG', 'LEAF', 'LAKE', 'HILL', 'ROAD', 'BELL', 'SONG', 'BABY', 'DOLL', 'TOY', 'APPLE', 'ORANGE', 'BANANA', 'MOUSE', 'HAPPY', 'SAD', 'SMILE', 'LAUGH', 'CRY', 'FRIEND', 'PLAY', 'FLOWER', 'SLEEP', 'WAKE', 'HUG', 'KITE', 'OCEAN', 'RIVER', 'BRIDGE', 'SLIDE', 'SWING', 'COLOR', 'PAINT', 'DRAW', 'CHAIR', 'TABLE', 'BEDROOM', 'KITCHEN', 'WINDOW', 'MIRROR', 'MIRROR', 'WATCH', 'TIME', 'CLOCK', 'LETTER', 'MAIL', 'SEND', 'RECEIVE']
+
+        return random.choice(words)
+
+    def display_word(secret_word, guessed_letters):
+        display = ""
+        for letter in secret_word:
+            if letter in guessed_letters:
+                display += letter
+            else:
+                display += "_"
+        return display
+
+    def hangman():
+        print('''
+                                                    ██╗░░██╗░█████╗░███╗░░██╗░██████╗░███╗░░░███╗░█████╗░███╗░░██╗
+                                                    ██║░░██║██╔══██╗████╗░██║██╔════╝░████╗░████║██╔══██╗████╗░██║
+                                                    ███████║███████║██╔██╗██║██║░░██╗░██╔████╔██║███████║██╔██╗██║
+                                                    ██╔══██║██╔══██║██║╚████║██║░░╚██╗██║╚██╔╝██║██╔══██║██║╚████║
+                                                    ██║░░██║██║░░██║██║░╚███║╚██████╔╝██║░╚═╝░██║██║░░██║██║░╚███║
+                                                    ╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝░╚═════╝░╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝
+                
+                            -----------------------------------------------------------------------------------------------------------                                     
+                            | RULES:                                                                                                  |   
+                            |     1. A random word will be selected by the computer for you to guess it.                              |   
+                            |     2. You can guess a single letter every time.                                                        |
+                            |     3. If the guessed letter is not in the word your attempts gets reduced.                             |
+                            |     4. If your guess is right it is added to the word and you will have no deduction from the attempts. |
+                            |     5. If the number of attempts is over and you did not guess the word then you lose the game.         |   
+                            |     6. If you guess the entire word in the number of attempts then you win the game.                    |   
+                            |     7. Improper inputs are not counted as a wrong guess.                                                |   
+                            -----------------------------------------------------------------------------------------------------------''')
+        print('''
+        
+
+            ''')
+        h=input('                                                                     Press ENTER to continue...')
+        clear()
+        secret_word = choose_word()
+        guessed_letters = []
+        attempts = 11
+
+        while attempts > 0:
+            print('                                                                     ----------------------------')
+            current_display = display_word(secret_word, guessed_letters)
+            print(f"                                                                     Current Word: {current_display}")
+            print(f"                                                                     Attempts left: {attempts}")
+            print(f'                                                                     Letters guessed: {guessed_letters}')
+            
+            print('                                                                     ----------------------------')
+            guess = input("                                                                     Guess a letter: ").upper()
+            if len(guess) != 1 or not guess.isalpha():
+                clear()
+                print('                                                                     ----------------------------')
+                print("                                                                     Invalid input. Please enter a single letter.")
+                continue
+
+            if guess in guessed_letters:
+                clear()
+                print('                                                                     ----------------------------')
+                print("                                                                     You already guessed that letter. Try again.")
+                continue
+
+            guessed_letters.append(guess)
+
+            if guess not in secret_word:
+                attempts -= 1
+                clear()
+                print('                                                                     ----------------------------')
+                print("                                                                     Incorrect guess!")
+                print('                                                                     ----------------------------')
+            else:
+                clear()
+                print('                                                                     ----------------------------')
+                print("                                                                     Correct guess!")
+                print('                                                                     ----------------------------')
+                
+
+            if all(letter in guessed_letters for letter in secret_word):
+                print(f"                                                                     Congratulations! You guessed the word: {secret_word}")
+                print('                                                                     ----------------------------')
+                break
+
+        if attempts == 0:
+            print(f"                                                                     Sorry, you ran out of attempts. The word was: {secret_word}")
+            print('                                                                     ----------------------------')
+        h=input('                                                                     Press ENTER to continue...')
+        clear()
+
+
+    hangman()
+
+def WORDLE():
+    print('''
+                                                        ░██╗░░░░░░░██╗░█████╗░██████╗░██████╗░██╗░░░░░███████╗
+                                                        ░██║░░██╗░░██║██╔══██╗██╔══██╗██╔══██╗██║░░░░░██╔════╝
+                                                        ░╚██╗████╗██╔╝██║░░██║██████╔╝██║░░██║██║░░░░░█████╗░░
+                                                        ░░████╔═████║░██║░░██║██╔══██╗██║░░██║██║░░░░░██╔══╝░░
+                                                        ░░╚██╔╝░╚██╔╝░╚█████╔╝██║░░██║██████╔╝███████╗███████╗
+                                                        ░░░╚═╝░░░╚═╝░░░╚════╝░╚═╝░░╚═╝╚═════╝░╚══════╝╚══════╝
+          ''')
+    print('''
+                        ---------------------------------------------------------------------------------------------------------------
+                        | RULES:                                                                                                      | 
+                        |   1. You can choose how many letter word you want to play.                                                  | 
+                        |   2. After you choose, the computer chooses a word.                                                         | 
+                        |   3. You will be asked to guess the word.                                                                   | 
+                        |   4. The correctly placed letters, misplaced letters and letters not present will be showen from your guess.|
+                        |   5. You win if you guess the word within 7 attempts else you loose.                                        |
+                        ---------------------------------------------------------------------------------------------------------------''')
+    print('''
+        
+
+            ''')
+    h=input('                                                                     Press ENTER to continue...')
+    clear()
+    words3=['THE', 'AND', 'FOR', 'YOU', 'CAN', 'GET', 'HAS', 'ITS', 'LET', 'NOT', 'ONE', 'PUT', 'SAY', 'SEE', 'THE', 'ALL', 'ANY', 'ARE', 'BUT', 'CAN', 'DID', 'GET', 'HAS', 'HER', 'HIM', 'HIS', 'HOW', 'MAN', 'MAY', 'NEW', 'NOW', 'OLD', 'OUR', 'OUT', 'OWN', 'SAY', 'SEE', 'SHE', 'THE', 'TWO', 'USE', 'WHO', 'WHY', 'YES', 'YOU', 'BIG', 'CAT', 'DOG']
+    words4=['BLUE', 'CHAT', 'DEAR', 'EASY', 'FISH', 'GOLD', 'HALO', 'JUMP', 'KIND', 'LOVE', 'MAKE', 'NOTE', 'OPEN', 'PART', 'QUAD', 'RACE', 'SOFT', 'TRUE', 'UNIT', 'VAST', 'WISH', 'XRAY', 'YARD', 'ZOOM', 'ATOM', 'BOLD', 'CLUB', 'DEEP', 'ECHO', 'FOUR', 'GLOW', 'HERO', 'ICON', 'JOLT', 'KISS', 'LIME', 'MIST', 'NOON', 'PINK', 'QUIT', 'ROSE', 'SNOW', 'TIDE', 'UPON', 'VIEW', 'WOLF', 'YOGA', 'ZEAL']
+    words5=['APPLE', 'BRAVE', 'CHASE', 'DREAM', 'ELBOW', 'FAITH', 'GRACE', 'HUMOR', 'IMAGE', 'JOKER', 'LUNCH', 'MAGIC', 'NIGHT', 'OASIS', 'PLUTO', 'QUICK', 'RAVEN', 'SUNNY', 'THUMP', 'UMBRA', 'VIVID', 'WATCH', 'XENON', 'YIELD', 'ZEBRA', 'ABOVE', 'BLISS', 'CHAMP', 'DANCE', 'EXTRA', 'FROST', 'GLOWY', 'HELLO', 'IVORY', 'JAZZY', 'KNEAD', 'LEMUR', 'MUSIC', 'NOBLE', 'OPERA', 'PRIZE', 'QUEST', 'RAINY', 'SLEEP', 'TIGER', 'UMBRA', 'VISTA', 'WORTH', 'XENIA', 'YOGIC', 'ZONAL']
+    words6=['BANANA', 'CIRCLE', 'DINNER', 'EASILY', 'FOLLOW', 'GUITAR', 'HUNGRY', 'INSECT', 'JACKET', 'KINDLY', 'LANTER', 'MELLOW', 'NATION', 'OUTLET', 'PEACHY', 'QUOTER', 'RADISH', 'SIMPLE', 'THRIVE', 'UNIQUE', 'VISION', 'WILLOW', 'YELLOW', 'ZEBRAS', 'ABOUND', 'BRIDGE', 'CLOUDY', 'DAISY', 'EXQUIS', 'FUTURE', 'GIGGLE', 'HEROIC', 'ISLAND', 'JIGSAW', 'KABOOM', 'LIZARD', 'MIRROR', 'NUANCE', 'ORANGE', 'PLUMPS', 'QUESTS', 'RANGER', 'STARRY', 'TRIFLE', 'UMBRAE', 'VOLUME', 'WONDER', 'XENONS', 'YOGURT', 'ZOMBIE']
+    words7=['BUBBLES', 'COTTAGE', 'DAZZLED', 'EXPLORE', 'FRIENDS', 'GARDENY', 'HUNGRY', 'ISLANDS', 'JACKETY', 'KINDRED', 'LAUGHED', 'MELLOWY', 'NAPPING', 'OCEANIC', 'PLAYFUL', 'QUIETER', 'ROSEBUD', 'SUNBEAM', 'TRENDY', 'UMBRELL', 'VALUING', 'WALKING', 'YELLOWY', 'ZOOMING', 'APPLES', 'BRIDGE', 'CHERRY', 'DAFFOD', 'EXOTIC', 'FLYING', 'GRAPES', 'HEARTY', 'ISLAND', 'JIGSAW', 'KITTEN', 'LOVING', 'MUSING', 'NATURE', 'ORANGE', 'PUPPY', 'QUIRKY', 'RAVISH', 'SUNSET', 'UNWIND', 'VIBRANT', 'WINTER']
+
+    while True:
+        try:
+            print('                                                                     ----------------------------')
+            print('                                                                     Number of letters:')
+            print('                                                                     ----------------------------')
+            print('                                                                      3 Letters')
+            print('                                                                      4 Letters')
+            print('                                                                      5 Letters')
+            print('                                                                      6 Letters')
+            print('                                                                      7 Letters')
+            print('                                                                     ----------------------------')
+            l=int(input('                                                                     Enter your choice: '))
+
+            if l<3 or l>7:
+                clear()
+                print('                                                                     ----------------------------')
+                print('                                                                     Entry out of range, enter again')
+            elif l==3:
+                word=random.choice(words3)
+                break
+            elif l==4:
+                word=random.choice(words4)
+                break
+            elif l==5:
+                word=random.choice(words5)
+                break
+            elif l==6:
+                word=random.choice(words6)
+                break
+            elif l==7:
+                word=random.choice(words7)
+                break
+        except ValueError:
+            clear()
+            print('                                                                     ----------------------------')
+            print('                                                                     Enter only numerical values.')
+    clear()
+    l1=len(word)
+    print('                                                                     ----------------------------')
+    print(f'                                                                     The word is {l1} letters')
+    a=1
+    g=[]
+    while a!=8:
+        print('                                                                     ----------------------------')
+        guess=input(f'                                                                     Guess {a}: Enter your guess: ').upper()
+        t=guess.split()
+        l=''
+        for i in t:
+            l+=i
+        guess=l
+        clear()
+        l2=len(guess)
+        
+        if l1!=l2 or guess.isdigit():
+            c=1
+            print('                                                                     ----------------------------')
+            for b in g:
+                print('                                                                     Guess ',c,': |',' | '.join(b),'|')
+                c+=1
+            print('                                                                     ----------------------------')
+            
+            print('                                                                     Correctly Placed Letters: ',','.join(cpl))
+            print('                                                                     Misplaced Letters: ',','.join(mpl))
+            print('                                                                     Letters Not Present: ',','.join(lnp))
+            print('                                                                     ----------------------------')
+            print('                                                                     Enter a ',l1,' letter word')
+            
+        elif guess in g:
+            c=1
+            print('                                                                     ----------------------------')
+            for b in g:
+                print('                                                                     Guess ',c,': |',' | '.join(b),'|')
+                c+=1
+            print('                                                                     ----------------------------')
+            cpl=[]
+            l=len(guess)
+            for i in word:
+                j=word.index(i)
+                if i==guess[j]:
+                    cpl.append(i)
+
+            mpl=set(guess) & set(word) - set(cpl)
+            lnp=set(guess) - set(word)
+            print('                                                                     Correctly Placed Letters: ',','.join(cpl))
+            print('                                                                     Misplaced Letters: ',','.join(mpl))
+            print('                                                                     Letters Not Present: ',','.join(lnp))
+            print('                                                                     ----------------------------')
+            print('                                                                    ',guess,' already guessed')
+            print('                                                                     Guess again')
+            
+        elif guess==word:
+            g.append(guess)
+            c=1
+            print('                                                                     ----------------------------')
+            for b in g:
+                print('                                                                     Guess ',c,': |',' | '.join(b),'|')
+                c+=1
+            print('                                                                     ----------------------------')
+            cpl=[]
+            l=len(guess)
+            for i in word:
+                j=word.index(i)
+                if i==guess[j]:
+                    cpl.append(i)
+
+            mpl=set(guess) & set(word) - set(cpl)
+            lnp=set(guess) - set(word)
+            print('                                                                     Correctly Placed Letters: ',','.join(cpl))
+            print('                                                                     Misplaced Letters: ',','.join(mpl))
+            print('                                                                     Letters Not Present: ',','.join(lnp))
+            print('                                                                     ----------------------------')
+            print('                                                                     You guessed it right')
+            print('                                                                     The word is ',guess)
+            print('                                                                     ----------------------------')
+            break
+        
+        else:
+            g.append(guess)
+            c=1
+            print('                                                                     ----------------------------')
+            for b in g:
+                print('                                                                     Guess ',c,': |',' | '.join(b),'|')
+                c+=1
+            print('                                                                     ----------------------------')
+            cpl=[]
+            l=len(guess)
+            for i in word:
+                j=word.index(i)
+                if i==guess[j]:
+                    cpl.append(i)
+
+            mpl=set(guess) & set(word) - set(cpl)
+            lnp=set(guess) - set(word)
+            print('                                                                     Correctly Placed Letters: ',','.join(cpl))
+            print('                                                                     Misplaced Letters: ',','.join(mpl))
+            print('                                                                     Letters Not Present: ',','.join(lnp))
+            a+=1
+            if a==8:
+                print('                                                                     ----------------------------')
+                print('                                                                     Attempts over')
+                print('                                                                     The word was ',word)
+                print('                                                                     ----------------------------')
+                break
+    h=input('                                                                     Press ENTER to continue...')
+    clear()
+
 
 a=0
 while a==0:
@@ -809,7 +1086,9 @@ while a==0:
                                                                     2. ROCK PAPER SCISSORS
                                                                     3. PIG
                                                                     4. NUMBER GUESSING
-                                                                    5. EXIT GAMES MENU
+                                                                    5. HANGMAN
+                                                                    6. WORDLE
+                                                                    7. EXIT GAMES MENU
                                                                     ----------------------------''')
     b=0
     while b==0:
@@ -843,8 +1122,22 @@ while a==0:
                 while c==0:
                     NG()            
                     c=play_again_or_not()
-                    
+            
             elif c==5:
+                b+=1
+                c=0
+                while c==0:
+                    HANGMAN()
+                    c=play_again_or_not()
+            
+            elif c==6:
+                b+=1
+                c=0
+                while c==0:
+                    WORDLE()        
+                    C=play_again_or_not()
+                    
+            elif c==7:
                 print('''
                                             ░██████╗░░█████╗░███╗░░░███╗███████╗░██████╗  ███╗░░░███╗███████╗███╗░░██╗██╗░░░██╗
                                             ██╔════╝░██╔══██╗████╗░████║██╔════╝██╔════╝  ████╗░████║██╔════╝████╗░██║██║░░░██║
@@ -860,6 +1153,7 @@ while a==0:
                                             ╚█████╔╝███████╗╚█████╔╝██████╔╝███████╗██████╔╝
                                             ░╚════╝░╚══════╝░╚════╝░╚═════╝░╚══════╝╚═════╝░''')
                 h=input()
+                clear()
                 b+=1
                 a+=1
                 print()
