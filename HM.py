@@ -1,5 +1,5 @@
-import random
 import os
+import random
 
 def clear():
     os.system('cls')
@@ -37,13 +37,15 @@ def HANGMAN():
                             |     5. If the number of attempts is over and you did not guess the word then you lose the game.         |   
                             |     6. If you guess the entire word in the number of attempts then you win the game.                    |   
                             |     7. Improper inputs are not counted as a wrong guess.                                                |   
-                            -----------------------------------------------------------------------------------------------------------
-                                                    
-              ''')
+                            -----------------------------------------------------------------------------------------------------------''')
+        print('''
+        
+
+            ''')
         h=input('                                                                     Press ENTER to continue...')
         clear()
         secret_word = choose_word()
-        guessed_letters = set()
+        guessed_letters = []
         attempts = 11
 
         while attempts > 0:
@@ -67,7 +69,7 @@ def HANGMAN():
                 print("                                                                     You already guessed that letter. Try again.")
                 continue
 
-            guessed_letters.add(guess)
+            guessed_letters.append(guess)
 
             if guess not in secret_word:
                 attempts -= 1
@@ -90,8 +92,9 @@ def HANGMAN():
         if attempts == 0:
             print(f"                                                                     Sorry, you ran out of attempts. The word was: {secret_word}")
             print('                                                                     ----------------------------')
+        h=input('                                                                     Press ENTER to continue...')
+        clear()
 
 
     hangman()
 
-HANGMAN()

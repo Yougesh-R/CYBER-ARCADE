@@ -70,6 +70,7 @@ def WORDLE():
             clear()
             print('                                                                     ----------------------------')
             print('                                                                     Enter only numerical values.')
+    clear()
     l1=len(word)
     print('                                                                     ----------------------------')
     print(f'                                                                     The word is {l1} letters')
@@ -179,4 +180,3 @@ def WORDLE():
     h=input('                                                                     Press ENTER to continue...')
     clear()
 
-WORDLE()
