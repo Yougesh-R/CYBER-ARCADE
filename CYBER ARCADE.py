@@ -48,7 +48,7 @@ while a==0:
                                                                     ----------------------------
                                                                         GAMES WITH COMPUTER 
                                                                     ----------------------------
-                                                                                MAIN MENU
+                                                                              MAIN MENU
                                                                     1. HAND CRICKET
                                                                     2. ROCK PAPER SCISSORS
                                                                     3. PIG
